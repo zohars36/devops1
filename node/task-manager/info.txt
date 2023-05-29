@@ -1,0 +1,11 @@
+https://www.udemy.com/course/the-complete-nodejs-developer-course-2/learn/lecture/13729176#overview
+
+https://www.mongodb.com/try/download/community
+https://www.mongodb.com/docs/drivers/node/current/
+
+https://mongoosejs.com/
+
+
+Array 
+~~~~~~~~~~~~~~~
+https://www.youtube.com/watch?v=IXp06KekEjM&list=PLgBH1CvjOA62PBFIDq55-S6Beivje30A2&index=4
