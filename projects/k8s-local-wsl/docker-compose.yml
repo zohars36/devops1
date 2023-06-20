@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    image: zoharweb:1.0
+    ports:
+      - "5001:5000"
+    restart: always
+  

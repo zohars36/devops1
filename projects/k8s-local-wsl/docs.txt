@@ -1,0 +1,55 @@
+
+https://www.youtube.com/watch?v=SdTzwYmsgoU&list=PLb_JLFdPwbgFtILZPS5S87HqcKohgaO4F&index=4 (implement in WSL instead of win)
+
+https://www.virtualizationhowto.com/2021/11/install-minikube-in-wsl-2-with-kubectl-and-helm/
+
+https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl/
+
+https://microk8s.io/compare
+
+
+1. create python flask project
+    - create env - /mnt/c/Zohar/learn/Repos/devops1/projects/k8s-local-wsl$ python3 -m venv k8s-local-wsl-env
+    - activate env - /mnt/c/Zohar/learn/Repos/devops1/projects/k8s-local-wsl$ source k8s-local-wsl-env/bin/activate
+    - install python ext.
+    - (Ctrl + Shift + P), type "settings," and then select either the general settings or WSL-specific settings: Open Remote Setting (WSL: Ubuntu)
+    - CTRL+SHIFT+P --> Search Python Interpreter --> Select Your virtual Environment (k8s-local-wsl-env/bin/python.exe) 
+    - pip list
+    - pip install Flask
+    - pip list (verify its install only under the specific env)
+    - after finish writing the code - pip freeze > requirements.txt
+
+    setup docker in minikube
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    - minikube start
+    - minikube docker-env
+    - copy the varibales to command and set enter (Time in video 44:40)
+      https://www.youtube.com/watch?v=SdTzwYmsgoU&list=PLb_JLFdPwbgFtILZPS5S87HqcKohgaO4F&index=4 (implement in WSL instead of win)
+    - docker ps (after connectiong get the list from minikube)
+    - when have problem with pulling image need to login again to dockerhub.com with the commands:
+      sudo docker logout
+      sudo docker login
+    - sudo docker build -t zoharweb:1.0 . (create from docker file)
+    - docker run -d -p 80:5000 --name web zoharweb:1.0 (run container)
+    - minikube ip
+    - sudo apt install docker-compose
+    - docker-compose build
+    - docker-compose up -d
+    - sudo snap install kubectl --classic
+    - kubectl version --client
+    - kubectl apply -f service.yml
+    - kubectl get po
+    - kubectl apply -f service.yml
+    - kubectl get po,svc
+    - kubectl delete -f . (delete all)
+    - helm init (for the first time, install tiller)
+    - helm create zwebapp (create template folder)
+    - kubectl get po,svc
+    - helm delete needled-scorpion
+    - kubectl get po,svc
+
+
+
+
+
+

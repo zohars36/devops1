@@ -1,0 +1,22 @@
+general
+~~~~~~~~~~
+from powershell -  wsl --list --verbose (check status)
+sudo reboot --force
+
+
+Install WCL, Docker, minikube
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+https://www.virtualizationhowto.com/2021/11/install-minikube-in-wsl-2-with-kubectl-and-helm/
+
+systemD
+~~~~~~~~~~~~~~~~~~~~
+https://www.youtube.com/watch?v=5JVBpXiYMKo
+
+systemctl - all the background services
+sudo apt install apache2 (sudo apt remove apache2)
+systemctl status apache2
+sudo systemctl disable apache2 (on startup after restart)
+sudo systemctl stop apache2
+sudo systemctl start apache2 - can use start@<userName>
+
+
